@@ -1,0 +1,35 @@
+<div class="bg-video d-flex justify-content-center align-items-center position-relative">
+  <video id="bannerVideo" class="video-fluid" autoplay muted loop>
+    <source src="../../../assets/banner_sakura.mp4" type="video/mp4">
+  </video>
+  <form class="d-flex input-group w-25 align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
+    <input
+      type="search"
+      class="form-control rounded"
+      placeholder="Search"
+      aria-label="Search"
+      name="search"
+      [(ngModel)]="search"
+      (keyup)="onSearch()"
+    />
+    <span class="input-group-text border-0 bg-dark" id="search-addon">
+      <a class="fas fa-search text-white"></a>
+    </span>
+  </form>
+</div>
+
+<div class="container mb-5">
+  <div class="row mb-5">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let anime of animeList">
+      <app-anime-card
+        [mal_id]="anime.mal_id"
+        [title]="anime.title"
+        [title_japanese]="anime.title_japanese"
+        [image_url]="anime.images.jpg.image_url"
+        [genres]="anime.genres"
+        [episodes]="anime.episodes"
+        [score]="anime.score"
+      ></app-anime-card>
+    </div>
+  </div>
+</div>

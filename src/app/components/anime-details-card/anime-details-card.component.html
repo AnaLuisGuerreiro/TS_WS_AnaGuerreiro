@@ -1,0 +1,51 @@
+<div class="anime-card mt-5 mb-5">
+  <div class="anime-card-content">
+    <div class="row">
+      <div class="col">
+        <h1 class="mt-2">{{ anime.title }}</h1>
+        <h2 class="mb-5">{{anime.title_japanese}}</h2>
+        <div class="text-center">
+          <img [src]="anime.images.jpg.large_image_url" alt="{{ anime.title }}" >
+        </div>
+      </div>
+      <div class="col mt-5">
+        <ul class="list-group list-group-small">
+          <h4><u>Synopsis</u></h4>
+          <li class="list-group-item bg-purple"> {{ anime.synopsis }}</li>
+        </ul>
+        <div class="row mt-4 p-2">
+          <div class="col-3">
+            <h5><u>Episodes:</u></h5>
+          </div>
+          <div class="col-4 text-white">
+            <p>{{anime.episodes}} 🎬</p>
+          </div>
+          <div class="col-2">
+            <h5><u>Duration:</u></h5>
+          </div>
+          <div class="col-3 text-white">
+            <p>{{anime.duration}} 🕐</p>
+          </div>
+          <hr>
+        </div>
+        <div class="row mt-4 p-2">
+          <div class="col-3">
+            <h5><u>Release:</u></h5>
+          </div>
+          <div class="col-4 text-white">
+            <p>{{anime.aired.string.slice(0,13)}} 📅</p>
+          </div>
+          <div class="col-2">
+            <h5><u>Rating:</u></h5>
+          </div>
+          <div class="col-3 text-white">
+            <p>{{anime.rating}} 👩🏼‍🤝‍🧑🏾</p>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
